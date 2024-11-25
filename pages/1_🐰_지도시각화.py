@@ -33,7 +33,7 @@ st.markdown(content01, unsafe_allow_html=True)
 def load_data():
     # CSV 파일 로드
     df_sigungu_cbr = pd.read_csv(
-        "C:/chumin-quarto-32/chumin-quarto-32/data-visualization/연령별_출산율_및_합계출산율_행정구역별(시군구).csv",
+        "files/연령별_출산율_및_합계출산율_행정구역별(시군구).csv",
         header=2,
         encoding='cp949'
     )
@@ -70,7 +70,7 @@ import streamlit as st
 @st.cache_data
 def load_geojson():
     # GeoJSON 파일 로드
-    gdf_korea_sigungu = gpd.read_file("C:/chumin-quarto-32/chumin-quarto-32/data-visualization/대한민국시군구.json")
+    gdf_korea_sigungu = gpd.read_file("files/대한민국시군구.json")
     return gdf_korea_sigungu
 
 def update_region_names(gdf_korea_sigungu):
