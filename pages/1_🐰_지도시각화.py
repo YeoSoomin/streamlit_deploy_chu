@@ -266,4 +266,3 @@ folium.Choropleth(
 from streamlit.components.v1 import html
 map_html = sigungu_map._repr_html_()
 html(map_html, height=600)
-
