@@ -1,3 +1,5 @@
 geopandas
 matplotlib
 folium
+pandas
+numpy
