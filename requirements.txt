@@ -3,3 +3,4 @@ matplotlib
 folium
 pandas
 numpy
+plotly.express
