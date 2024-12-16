@@ -30,7 +30,7 @@ if file is not None:
     st.write(f"{file.name} 파일이 업로드 되었습니다.")
     df = pd.read_csv(io.StringIO(file.getvalue().decode("utf-8")))
 else:
-    df = pd.read_csv("C:/streamlit32/streamlit_deploy_chu/files/도로교통공단_자전거사고 다발지역 개별사고 정보_20201231.csv", encoding="UTF-8")
+    df = pd.read_csv("files/도로교통공단_자전거사고 다발지역 개별사고 정보_20201231.csv", encoding="UTF-8")
 
 # 발생일을 날짜형으로 변환
 df["발생일"] = pd.to_datetime(df["발생일"])
@@ -59,7 +59,7 @@ df_map["다발지시군구"] = df_map["다발지시군구"].str.split().str[0]
 df_map["다발지시군구"] = df_map["다발지시군구"].str.replace(r'[^\w\s]', '', regex=True).str.strip()
 
 # 지도 시각화 데이터 전처리(JGSON)
-gdf_korea_si = gpd.read_file("C:/streamlit32/streamlit_deploy_chu/files/gdf_korea_sido_2022.json")
+gdf_korea_si = gpd.read_file("files/gdf_korea_sido_2022.json")
 gdf_korea_si["다발지시군구"] = gdf_korea_si["CTP_KOR_NM"]
 
 # 그래프 시각화 데이터 전처리(csv)
